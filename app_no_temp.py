@@ -14,7 +14,10 @@ import pyproj
 
 hv.extension('bokeh')
 
-df = intake.open_csv('./data/bird_migration/{species}.csv').read()
+from bokeh.io import curdoc
+from bokeh.plotting import figure
+
+df = intake.open_csv('data/bird_migration/{species}.csv').read()
 
 def fill_day(v):
     next_year = v.assign(day=v.day + v.day.max())
