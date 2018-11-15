@@ -1,5 +1,6 @@
 dependencies:
   - nbserverproxy
+  - intake::intake
   - pyviz/label/dev::geoviews-core=1.6.0a2
   - pyviz/label/dev::holoviews=1.11.0a10
   - pyviz/label/dev::hvplot=0.3.0a5
