@@ -1,4 +1,4 @@
-Example for demoing a bokeh server with Binder
+# Bird Migration Panel App
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/panel-demos/bird_migration/master?urlpath=/proxy/5006/app)
 
