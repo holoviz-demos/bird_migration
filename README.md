@@ -1,9 +1,13 @@
-# PyData DC 2018
+Example for demoing a bokeh server with Binder
 
-<a href=https://mybinder.org/v2/gh/jsignell/pydata_dc_2018/master ><img src=https://mybinder.org/badge_logo.svg width=300/></a>
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/panel-demos/bird_migration/master?urlpath=/proxy/5006/app
 
-Materials for PyViz talk at PyDataDC 2018 - building up to the creation of this dashboard:
+Create a `app_no_temp.py` in the repo. This is the application that will be served.
 
-<img src="./assets/dashboard.png"></img>
+This repo contains:
 
-<a href=https://mybinder.org/v2/gh/jsignell/pydata_dc_2018/master ><img src=https://mybinder.org/badge_logo.svg width=300/></a>
+- `environment.yml` installing bokeh and nbserverproxy
+- a custom serverextension (`bokehserverextension.py`) that launches bokeh server
+- a `postBuild` script to enable the server extensions and install the local one
+  (this last step would go away if the local extension became a proper package)
+- A [panel](https://github.com/pyviz/panel) based app which visualizes migration patterns of bird species in the Americas

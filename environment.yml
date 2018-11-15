@@ -1,15 +1,9 @@
-name: birds
-channels:
-  - conda-forge
 dependencies:
-  - jupyter
-  - ipywidgets>=7.4.2
-  - cartopy
-  - pyviz/label/dev::geoviews=1.6.0a2
+  - nbserverproxy
+  - pyviz/label/dev::geoviews-core=1.6.0a2
   - pyviz/label/dev::holoviews=1.11.0a10
   - pyviz/label/dev::hvplot=0.3.0a5
-  - intake::intake=0.2.9
-  - numpy
-  - pandas>=0.23.4
   - pyviz/label/dev::panel=0.2.0a8
+  - bokeh::bokeh=1.0.1
+  - pandas>=0.23.4
   - xarray
