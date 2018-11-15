@@ -1,6 +1,6 @@
 # Bird Migration Panel App
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/panel-demos/bird_migration/master?urlpath=/proxy/5006/app)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/panel-demos/bird_migration/master?urlpath=/proxy/5006/app_no_temp)
 
 Create a `app_no_temp.py` in the repo. This is the application that will be served.
 
