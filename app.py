@@ -106,28 +106,28 @@ def daily_table(species=None, day=None):
 
 species = pn.widgets.MultiSelect(options=df.species.cat.categories.tolist(), size=10)
 day = pn.widgets.Player(value=1, start=1, end=365, step=5, loop_policy='loop', name='day', width=350)
-toggle = pn.widgets.Toggle(name='Air Temperature Layer', active=True)
-highlight = pn.widgets.Toggle(name='Highlight Birds', active=False)
+toggle = pn.widgets.Toggle(name='Air Temperature Layer', value=True)
+highlight = pn.widgets.Toggle(name='Highlight Birds', value=False)
 
 species_stream = Params(species, ['value'], rename={'value': 'species'})
 day_stream = Params(day, ['value'], rename={'value': 'day'})
-toggle_stream = Params(toggle, ['active'])
-highlight_stream = Params(highlight, ['active'])
+toggle_stream = Params(toggle, ['value'])
+highlight_stream = Params(highlight, ['value'])
 
 def reset(arg=None):
     day_stream.update(value=1)
     species_stream.update(value=[])
-    toggle_stream.update(active=True)
-    highlight_stream.update(active=False)
+    toggle_stream.update(value=True)
+    highlight_stream.update(value=False)
 
 reset_button = pn.widgets.Button(name='Reset')
 reset_button.param.watch(reset, 'clicks')
 
-def toggle_temp(layer, active=True):
-    return layer.options(fill_alpha=int(active))
+def toggle_temp(layer, value=True):
+    return layer.options(fill_alpha=int(value))
 
-def do_highlight(points, active=True):
-    return points.options(line_alpha=(0.5 if active else 0), selection_line_alpha=active)
+def do_highlight(points, value=True):
+    return points.options(line_alpha=(0.5 if value else 0), selection_line_alpha=value)
 
 bird_dmap = hv.util.Dynamic(birds.clone(streams=[day_stream]).options(line_color='white'),
                             operation=do_highlight, streams=[highlight_stream])
