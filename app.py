@@ -147,7 +147,7 @@ map_selected_stream = Selection1D(source=bird_dmap)
 map_selected_stream.param.watch_values(on_map_select, ['index'])
 
 dashboard = pn.Column(
-    pn.Row('## Bird Migration Dashboard', pn.Spacer(width=200, height=80)),
+    pn.Row('## Bird Migration Dashboard'),
     pn.Row(
         pn.Column(
             pn.Row(
@@ -162,7 +162,7 @@ dashboard = pn.Column(
                     'This reset button only resets widgets - otherwise use the plot reset 🔄',
                     reset_button
                 ),
-                pn.Spacer(width=100),
+                pn.Spacer(width=20),
             ),
             pn.Row(pn.layout.Tabs(('Latitude', ts_lat), ('Speed', ts_speed))),
         ),
