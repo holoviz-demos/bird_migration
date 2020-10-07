@@ -7,7 +7,7 @@ Serves the `app.py` app on mybinder, visualizing bird migration patterns in the 
 This repo contains:
 
 - `environment.yml` installing bokeh and nbserverproxy
-- a custom serverextension (`bokehserverextension.py`) that launches bokeh server
+- a custom serverextension (`panelserverextension.py`) that launches bokeh server
 - a `postBuild` script to enable the server extensions and install the local one
   (this last step would go away if the local extension became a proper package)
 - A [panel](https://github.com/pyviz/panel) based app which visualizes migration patterns of bird species in the Americas
